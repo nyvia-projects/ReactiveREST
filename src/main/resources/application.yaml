@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ReactiveREST
+
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+
+server:
+  port: 8081
+
