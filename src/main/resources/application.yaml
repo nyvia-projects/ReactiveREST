@@ -2,8 +2,14 @@ spring:
   application:
     name: ReactiveREST
 
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: ReactiveREST
+
   redis:
-    database: 0
+    database: 12
     host: localhost
     port: 6379
 

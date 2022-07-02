@@ -1,24 +1,29 @@
 package com.nychat.reactiverest.users;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 
 
-@Builder
+@Document(collection = "Users")
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Document(collection = "Users")
-public class User implements Serializable {
+@EqualsAndHashCode
+@ToString
+public abstract class User {
 
     @Id
-    private String id;
+    protected String id;
 
-    private String name;
+    protected String name;
 
-    private boolean access;
+    protected boolean access;
 
 }
+
